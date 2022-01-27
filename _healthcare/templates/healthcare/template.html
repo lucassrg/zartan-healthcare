@@ -1,34 +1,171 @@
 <!--Do Not Remove any parts of this document unless you expect to not use out of the box behaviours-->
 <html lang="en">
+<head>
+
+</style>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>HealthNational</title>
+  <!-- plugins:css -->
+  
+<style type="text/css">
+  
+.dropdown-item.preview-item, .badge.float-right, .dropdown-menu p{
+  cursor: pointer;
+}
+.smallcaps {
+  font-variant:  all-petite-caps;
+  font-weight: 1000;
+}
+
+.space-around > .icon-wrap {
+  margin:  0 2rem;
+}
+
+.get-help::after{
+  content:  "help_outline" !important;
+}
+
+
+.mdi-file-document.schedule::before{
+   content: '';
+  -webkit-mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>') no-repeat 50% 50%;
+ mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(0, 41, 122);
+  margin: 0 10px 0 0;
+}
+
+.mdi-file-document.walk-in::before{
+   content: '';
+  -webkit-mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>') no-repeat 50% 50%;
+mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(0, 41, 122);
+  margin: 0 10px 0 0;
+}
+
+.mdi-clipboard-text.tested::before{
+   content: '';
+  -webkit-mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"><path d="M22,7h-9v2h9V7z M22,15h-9v2h9V15z M5.54,11L2,7.46l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L5.54,11z M5.54,19L2,15.46 l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L5.54,19z"/></svg>') no-repeat 50% 50%;
+mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"><path d="M22,7h-9v2h9V7z M22,15h-9v2h9V15z M5.54,11L2,7.46l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L5.54,11z M5.54,19L2,15.46 l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L5.54,19z"/></svg>') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(0, 41, 122);
+}
+
+.mdi-file-document.video::before{
+   content: '';
+  -webkit-mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12l-4-3.2V14H6V6h8v3.2L18 6v8z"/></svg>') no-repeat 50% 50%;
+mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12l-4-3.2V14H6V6h8v3.2L18 6v8z"/></svg>') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(0, 41, 122);
+  margin: 0 10px 0 0;
+}
+
+.mdi-file-document.evisit::before{
+   content: '';
+  -webkit-mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM8 14H6v-2h2v2zm0-3H6V9h2v2zm0-3H6V6h2v2zm7 6h-5v-2h5v2zm3-3h-8V9h8v2zm0-3h-8V6h8v2z"/></svg>') no-repeat 50% 50%;
+  mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM8 14H6v-2h2v2zm0-3H6V9h2v2zm0-3H6V6h2v2zm7 6h-5v-2h5v2zm3-3h-8V9h8v2zm0-3h-8V6h8v2z"/></svg>') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(0, 41, 122);
+  margin: 0 10px 0 0;
+}
+
+.mdi-file-document.location::before{
+   content: '';
+  -webkit-mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>') no-repeat 50% 50%;
+  mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(0, 41, 122);
+  margin: 0 10px 0 0;
+}
+
+.mdi-file-document.contact::before{
+   content: '';
+  -webkit-mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79h1.51m9.86 12.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75l1.2-1.19M7.5 3H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57-.1-.04-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.45-5.15-3.76-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1z"/></svg>') no-repeat 50% 50%;
+  mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79h1.51m9.86 12.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75l1.2-1.19M7.5 3H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57-.1-.04-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.45-5.15-3.76-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1z"/></svg>') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(0, 41, 122);
+  margin: 0 1rem 0 0;
+}
+
+
+.padding-10 {
+  padding:  1rem 0 0 0;
+}
+
+
+.table th {
+  text-align: left;
+  font-weight: 1000 !important;
+}
+
+.table td, th {
+  padding: 0.625rem 0rem !important;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+.left{
+  text-align: left;
+}
+
+.margin-left {
+  margin-left: 8%;
+}
+
+.card-right {
+  text-align: right;
+}
+
+</style>
+</head>
     {% include '//components/template-header-meta.html' %} 
-    <body>
-        <div id="layoutDefault">
-            <div id="layoutDefault_content">
-                <main>
-                    {% if "login" in request.path %}
-                        {% set navitems ="navitems.html" %}
-                    {% elif "index" in request.path %} 
-                        {% set navitems ="navitems.html" %}
-                    {% elif "registration" in request.path %} 
-                        {% set navitems ="navitems.html" %}
-                    {% elif "/" == request.path %} 
-                        {% set navitems ="navitems.html" %}
-                    {% else %}
-                        {% set navitems ="navitemslogin.html" %}
-                    {% endif %}
-                    {% with mynavitems=navitems %}
-                        {% include '//components/template-navigation.html' %}
-                    {% endwith %}
-                    {% block content %}{% endblock %}
-                </main>
-            </div>
-            <div id="layoutDefault_footer">
-                {% block footer %}{% endblock %}
-            </div>
-            {% with color="black" %}
-                {% include '//components/template-footer.html' %}
-            {% endwith %}
-        </div>
-        {% include '//components/template-footer-scripts.html' %}
-    </body>
+    <body class="sidebar-toggle-display sidebar-hidden" >
+    {% block content %}{% endblock %}
+
+
+
+      <!-- plugins:js -->
+  <script src="https://www.bootstrapdash.com/demo/steelui/template/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="https://www.bootstrapdash.com/demo/steelui/template/js/hoverable-collapse.js"></script>
+  <script src="https://www.bootstrapdash.com/demo/steelui/template/js/template.js"></script>
+  <!-- endinject -->
+      </body>
 </html>
+
