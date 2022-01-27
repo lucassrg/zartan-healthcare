@@ -5,9 +5,11 @@
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
+        {% if user_info %}
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class=" mdi mdi-menu"></span>
           </button>
+        {% endif %}
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         {% if config.settings.app_logo != "" %}
@@ -15,13 +17,15 @@
         {% else %}
               <a class="navbar-brand brand-logo logo-title" href="/index">{{config.settings.app_name}}</a>
 
-             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
         {% endif %}
 
         {% if user_info is none or user_info is not defined %}
                 {% include config.settings.app_template + '/'+ navitems %} 
              <a class="btn-primary btn rounded-pill px-4 ml-lg-4" href="/login">Login<i class="fas fa-arrow-right ml-1"></i></a>
         {% else %}
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
+              <div class="welcome-message d-lg-flex d-none">Hi, welcome back!</div>
+
                <ul class="navbar-nav align-items-center ml-auto">
                     <li class="nav-item dropdown no-caret mr-3 dropdown-user">
                     <a class="px-4 ml-lg-4 dropdown-toggle" href="javascript:void(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi {{ user_info.name }}</a>
@@ -44,22 +48,11 @@
                 </ul>
         {% endif %}
     </div>
-              <div class="welcome-message d-lg-flex d-none">Hi, welcome back!</div>
 
 </nav>
         </div>
-        <ul class="navbar-nav mr-lg-2">
-          <li class="nav-item nav-search d-none d-lg-block">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Find Care" aria-label="search" aria-describedby="search">
-              <div class="input-group-append">
-                <span class="input-group-text" id="search">
-                  <i class=" mdi mdi-magnify"></i>
-                </span>
-              </div>
-            </div>
-          </li>
-        </ul>
+        {% if user_info %}
+
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
@@ -167,6 +160,7 @@
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class=" mdi mdi-menu"></span>
         </button>
+        {% endif %}
       </div>
     </nav> 
     <!-- partial -->
