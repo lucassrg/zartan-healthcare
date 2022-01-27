@@ -1,12 +1,251 @@
-        <ul class="navbar-nav mr-lg-2">
+     
+<style type="text/css">
+	
+	.hello {
+		display: flex;
+		flex: 0;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.hello-wrapper {
+		width: 100rem;
+	}
+
+
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+h1.main-title {
+	color: white;
+	font-size: 4em;
+}
+
+.featured {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  //height: auto;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(https://www.okta.com/sites/default/files/images/customer/inline/Envision_3.png) no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.title {
+  
+  position: relative;
+  text-align: center;
+  z-index: 5;
+  padding-top: 230px;
+  height: 100vh;
+  }
+
+  .main-title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  .subtitle {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+.form-control, .form-control:hover, .form-control:focus{
+	background-color: white;
+}
+
+
+@media all and (min-width: 1280px) {
+  
+  .bg {
+    background-size: 100% auto;
+    background-position: center center;
+    background-color: #000;
+  }
+  
+}
+
+.location-search {
+	   content: '';
+  -webkit-mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>') no-repeat 50% 50%;
+  mask: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+    background-color: rgb(201, 200, 200);
+}
+
+ul.navbar-nav {
+	display: flex; flex-direction: row; width: 75%; margin: 0 auto;
+}
+
+li.nav-search{
+	width:  30% !important;
+}
+
+li.nav-item {
+	margin: 0 1rem;
+	width: 18%;
+}
+
+
+/* animation class and keyframes */
+.overflow-hidden {
+ overflow: hidden;
+}
+
+.drop-in {
+ animation: drop-in 1s ease 200ms backwards;
+}
+
+.drop-in-2 {
+ animation: drop-in 1200ms ease 500ms backwards;
+}
+
+@keyframes drop-in {
+ from {
+  opacity: 0;
+  transform: translateY(-100px);
+ }
+ to {
+  opacity: 1;
+  transform: translate(0px);
+ }
+}
+
+.card-body {
+	cursor: pointer;
+}
+.card-body:hover{
+	background: rgba(1,1,1,0.1);
+	 transition: all 0.5s ease;
+}
+
+</style>
+
+
+      <div class="main-panel">
+        <div class="content-wrapper">
+    <section class="featured">
+  
+  <header class="title overflow-hidden" style="background: rgba(1,1,1,0.3)">
+    <h1 class="main-title drop-in">Say Hello to Better Health.</h1>
+            <ul class="navbar-nav mr-lg-2 drop-in-2">
           <li class="nav-item nav-search d-none d-lg-block">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Find Care" aria-label="search" aria-describedby="search">
-              <div class="input-group-append">
+         	 <div class="input-group-append">
                 <span class="input-group-text" id="search">
                   <i class=" mdi mdi-magnify"></i>
                 </span>
               </div>
+              <input type="text" class="form-control" placeholder="Condition, Treatment, Specialty, Doctor, Facility" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+    <li class="nav-item nav-insurance d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-append">
+                <span class="input-group-text" id="insurance">
+                  <i class=" mdi mdi-shield-outline"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Insurance" aria-label="insurance" aria-describedby="nsurance">
+
+            </div>
+          </li>
+      <li class="nav-item nav-location d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-append">
+                <span class="input-group-text" id="location">
+                  <i class=" mdi location-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Location" aria-label="Location" aria-describedby="location">
+
+            </div>
+          </li>
+                <li class="nav-item nav-location d-none d-lg-block">
+            <div class="input-group">
+            <button type="button" class="btn btn-primary btn-md" id="load2">Search</button>
+
             </div>
           </li>
         </ul>
+  </header>
+  
+  
+  <div class="bg"></div>
+  
+</section>
+<section>
+	
+	<p class="mb-5"><strong>All patients, visitors and staff are still required to wear a mask at all Atko Hospital entities, in line with CDC guidance.</strong>
+We remain focused on protecting your safety and well-being and firmly stand behind these evidence-based safety measures. </p>
+</section>
+
+          <div class="row">
+            <div class="col-md-6 col-lg-6 col-xl-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="flex-left-height">
+                      <h2>Vaccine</h2>
+                      <p class="mb-1">Check for the Latest COVID Update.</p>
+                    </div>
+                    <div class="icon-wrap">
+                      <i class=" mdi mdi-folder-outline"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex space-around align-items-center">
+                    <div class="icon-wrap">
+                      <i class=" mdi mdi-clipboard-text"></i>
+                    </div>
+                    <div class="flex-left-height">
+                      <h2>Vaccine Credentials</h2>
+                      <p class="mb-1">Latest visitiation and masking policies.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-12 col-xl-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex space-around align-items-center">
+                    <div class="icon-wrap">
+                      <i class=" mdi mdi-clipboard-text tested"></i>
+                    </div>
+                    <div class="flex-left-height">
+                      <h2>Should You Get Tested?</h2>
+                      <p class="mb-1">Get all the FAQs about COVID.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+      </div>
+  </div>

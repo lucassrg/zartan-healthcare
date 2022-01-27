@@ -1,10 +1,18 @@
+<style type="text/css">
+  
+  .atko-health {
+    justify-content: space-between;
+width: 100%;
+  }
+</style>
+
        <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 d-flex flex-row">
       <div class="navbar-brand-wrapper d-flex align-items-center justify-content-start">
         <a class="navbar-brand brand-logo-mini" href="index.html"></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center atko-health">
         {% if user_info %}
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class=" mdi mdi-menu"></span>
