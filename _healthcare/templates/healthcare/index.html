@@ -3,15 +3,7 @@
 {% block content %}
 
  <div class="container-scroller">
-  {% if user_info %}
- {% include  templatename+"/dashboard-welcome.html" %} 
-{% endif %}
     <div class="container-fluid page-body-wrapper">
-
-  {% if user_info %}
- {% include  templatename+"/dashboard-sidebar.html" %} 
-{% endif %}
-
 
 {% if user_info %}
  {% include  templatename+"/dashboard.html" %} 
