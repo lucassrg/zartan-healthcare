@@ -31,17 +31,17 @@ def registration_bp():
 def gbac_registration_state_get(stateToken):
     logger.debug("gbac_registration_state_get()")
     user_id = stateToken
-    return render_template(
-        "/registration-state.html",
-        templatename=get_app_vertical(),
-        userid=user_id,
-        config=session[SESSION_INSTANCE_SETTINGS_KEY],
-        _scheme=session[SESSION_INSTANCE_SETTINGS_KEY]["app_scheme"])
+#     return render_template(
+#         "/registration-state.html",
+#         templatename=get_app_vertical(),
+#         userid=user_id,
+#         config=session[SESSION_INSTANCE_SETTINGS_KEY],
+#         _scheme=session[SESSION_INSTANCE_SETTINGS_KEY]["app_scheme"])
 
 
-@gbac_registration_bp.route("/registration-state/<user_id>", methods=["POST"])
-@apply_remote_config
-def gbac_registration_state_post(user_id):
+# @gbac_registration_bp.route("/registration-state/<user_id>", methods=["POST"])
+# @apply_remote_config
+# def gbac_registration_state_post(user_id):
     logger.debug("gbac_registration_state_post()")
     logger.debug(request.form.get('password'))
     okta_admin = OktaAdmin(session[SESSION_INSTANCE_SETTINGS_KEY])
@@ -55,13 +55,10 @@ def gbac_registration_state_post(user_id):
             templatename=get_app_vertical(), config=session[SESSION_INSTANCE_SETTINGS_KEY],
             error=user_data['errorSummary'])
 
-    user_data["credentials"] = {
-        "password": {"value": request.form.get('password')},
-        "recovery_question": {
-            "question": "Company Name, its Okta.",
-            "answer": "Okta"
-        }
-    }
+    # user_data["credentials"] = {        
+    #     "password" : { "value": ""}
+        
+    # }
 
     logger.debug(user_data)
     user_update_response = okta_admin.update_user(user_id=user_data["id"], user=user_data)
