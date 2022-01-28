@@ -42,6 +42,7 @@ justify-content: space-between;
         {% endif %}
     
     </div>
+            {% if user_info %}
     <div>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown">
@@ -148,12 +149,13 @@ justify-content: space-between;
           </li>
         </ul>
 </div>
+        {% endif %}
 </nav>
         </div>
-        {% if user_info %}
 
 
-        {% endif %}
+
+
       </div>
     </nav> 
     <!-- partial -->
