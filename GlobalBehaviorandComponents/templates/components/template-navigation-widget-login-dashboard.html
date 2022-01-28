@@ -10,6 +10,32 @@ width: 100vw;
 margin:  0;
 justify-content: space-between;
   }
+
+
+@media all and (max-width: 900px) {
+  
+ #banner.guest {
+    width: 80vw;
+   
+  }
+  
+}
+  @media all and (min-width: 1280px) {
+  
+ #banner.guest {
+    width: 90vw;
+   
+  }
+  
+}
+  @media all and (min-width: 1281px) {
+  
+ #banner.guest {
+    width: 100vw;
+   
+  }
+  
+}
 </style>
 
        <!-- partial:partials/_navbar.html -->
@@ -24,7 +50,13 @@ justify-content: space-between;
             <span class=" mdi mdi-menu"></span>
           </button>
         {% endif %}
-<nav class="navbar navbar-expand-lg navbar-light" id="banner">
+              {% if user_info %}
+      <nav class="navbar navbar-expand-lg navbar-light" id="banner">
+        {% endif %}
+         {% if user_info is none or user_info is not defined %}
+     <nav class="navbar navbar-expand-lg navbar-light guest" id="banner">
+        {% endif %}
+
     <div class="container">
         {% if config.settings.app_logo != "" %}
              <a href="/index"><img src={{config.settings.app_logo}} border='0' style="max-height:100px;max-width:300px;height:auto;width:auto;"></a>
